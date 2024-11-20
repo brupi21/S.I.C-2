@@ -1,0 +1,173 @@
+/* Estilos base */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #fff2f2;
+}
+
+header {
+    background-color: #ffe6d7;
+    color: #5f3d28;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li img {
+    width: 20%;
+    height: 20%;
+}
+
+nav ul li a:hover {
+    color: #ff7043; /* Cambia el color del texto al pasar el mouse */
+    text-decoration: underline; /* Agrega un subrayado */
+    transition: color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.hero {
+    background: url('fondo.jpg') no-repeat center center/cover;
+    height: 100px;
+    color: #5f3d28;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.productos {
+    padding: 2rem;
+    text-align: center;
+    color: #5f3d28c5;
+}
+
+.productos h3 {
+    margin-bottom: 1rem;
+}
+
+.producto {
+    display: inline-block;
+    width: 30%;
+    margin: 1%;
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+    width: 100%;
+    height: auto;
+}
+
+#precio {
+    color: blue;
+}
+
+footer {
+    background-color: #ffe6d7;
+    color: #5f3d28;
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    bottom: 0;
+    align-items: self-end;
+}
+
+.WhatsApp img,
+.Instagram img {
+    display: inline;
+    width: 10%;
+    height: auto;
+}
+
+.contacto {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.WhatsApp,
+.Instagram {
+    text-align: center;
+}
+
+/* Media Queries para Responsividad */
+
+/* Pantallas medianas */
+@media (max-width: 768px) {
+    /* Ajusta el header y la navegación */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    /* Ajusta la galería de productos para que se muestren en dos columnas */
+    .producto {
+        width: 45%; /* Dos columnas en pantallas medianas */
+    }
+
+    /* Ajusta el contenedor de contacto */
+    .contacto {
+        flex-direction: column;
+    }
+
+    .WhatsApp img,
+    .Instagram img {
+        width: 15%; /* Aumenta el tamaño de los iconos para pantallas medianas */
+    }
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 480px) {
+    /* Ajusta los elementos de contacto para apilar en una sola columna */
+    .contacto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Cambia el tamaño de los iconos en la sección de contacto */
+    .WhatsApp img,
+    .Instagram img {
+        width: 10%;
+    }
+
+    /* Ajusta el tamaño de los productos para que ocupen el ancho completo */
+    .producto {
+        width: 90%; /* Una columna en pantallas pequeñas */
+    }
+
+    /* Ajusta el tamaño del texto del header */
+    header h1 {
+        font-size: 1.5rem;
+    }
+}
